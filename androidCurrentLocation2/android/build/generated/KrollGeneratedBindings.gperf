@@ -1,0 +1,18 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name AndroidCurrentLocationBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "com.oodles.androidcurrentlocation.AndroidCurrentLocationModule.h"
+#include "com.oodles.androidcurrentlocation.ExampleProxy.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+com.oodles.androidcurrentlocation.AndroidCurrentLocationModule, ::com::oodles::androidcurrentlocation::AndroidCurrentLocationModule::bindProxy, ::com::oodles::androidcurrentlocation::AndroidCurrentLocationModule::dispose
+com.oodles.androidcurrentlocation.ExampleProxy, ::com::oodles::androidcurrentlocation::androidcurrentlocation::ExampleProxy::bindProxy, ::com::oodles::androidcurrentlocation::androidcurrentlocation::ExampleProxy::dispose
+%%
