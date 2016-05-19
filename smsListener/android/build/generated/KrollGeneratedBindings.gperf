@@ -1,0 +1,18 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name SmsListenerBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "com.oodles.smslistener.SmsListenerModule.h"
+#include "com.oodles.smslistener.ExampleProxy.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+com.oodles.smslistener.SmsListenerModule, ::com::oodles::smslistener::SmsListenerModule::bindProxy, ::com::oodles::smslistener::SmsListenerModule::dispose
+com.oodles.smslistener.ExampleProxy, ::com::oodles::smslistener::smslistener::ExampleProxy::bindProxy, ::com::oodles::smslistener::smslistener::ExampleProxy::dispose
+%%
